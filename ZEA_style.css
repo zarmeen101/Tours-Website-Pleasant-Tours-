@@ -1,0 +1,185 @@
+	body{
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+		}
+		nav{
+			height: 63px;
+		}
+		header{
+			background-color: #AED6F1 ;
+			height: 25px;
+		}
+		.xy{
+			color: red;
+			font-weight: bolder;
+		}
+		ul{
+			float: right;
+			list-style: none;
+			margin-top: 11px;
+		}
+		div ul li{
+			display: inline-block;
+			padding-left: 50px;
+			font-size: 17px;
+			font-family: Arial ;
+			color: white;
+		}
+        #logo{
+        	width: 163px;
+        	margin-left: 35px;
+        	padding-top: 2px;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+     	font-family: Arial ;
+      	color: grey;  
+      	display: block;   
+      	 }
+      .dropbtn{
+       padding: 0px auto;
+       font-family: Arial ;
+       color: white;
+       font-size: 17px;
+       background-color:#3449DB ;
+       font-weight: bold;
+	   border: 1px solid #209210;
+	   height: 38px;
+	   border-top-right-radius:5px ;
+	   border-bottom-right-radius:5px ;
+      }     
+      .navinput{
+	height: 36px;
+	width: 500px;
+	border: 1px solid grey;
+	border-top-left-radius:5px ;
+	   border-bottom-left-radius:5px ;
+	border: 1px solid white;
+	font-size: 15px;
+	padding-left: 20px;
+	background-color: white;
+    }
+    .mid-div-container{
+    	display: flex;
+    	margin-left: 270px;
+    	margin-top: -40px;
+    }
+ .container-category{
+display: flex;
+background-color: white;
+
+}
+.dropbtn-second{
+	font-size: 17px;
+	background: none;
+	color: darkblue;
+	border: none;
+	padding: 17px;
+	padding-left: 75px;
+	font-family: Arial;
+	cursor: pointer;
+	outline: inherit;
+   font-weight: bold;
+   margin-left: 80px;
+   margin-top: -10px;
+  
+
+}
+.dropdown-second:hover .dropdown-content {display: block;}
+
+.dropdown-content a {
+  color: grey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ }
+i{
+	padding-left: 20px;
+}
+#carouImg{
+height: 600px;
+}
+h2{
+	font-weight: bold;
+	font-family: Ariel;
+	font-size: 45px;
+}
+.form{
+padding: 11px 18px 11px 18px;
+width: 240px;
+ height:30px;
+ border: 0pc;
+}
+#package_main_img{
+	padding-top: 10px;
+}
+.card-text{
+	font-size: 18px;
+	font-weight: bold;
+}
+table>tbody>tr>td {
+    border-top: 1px solid #efefef;
+    padding: 12px 10px;}
+
+    th, td {
+    text-align: left;
+  }
+  table {
+    border-bottom: 1px solid #f1f1f1;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0 0 20px;
+    width: 100%;
+	    }
+h6{
+	font-family: Arial;
+	font-size: 20px;
+	margin-top: 15px;
+}
+th{
+	font-size: 17px;
+	padding-left: 10px;
+}
+.small-img{
+	width: 400px;
+	padding-left: 10px;
+	padding-top:5px ;
+}
+#mainpicturediv{
+	display: inline-block;
+margin-left: 50px;
+}
+.icon-bar {
+  position: fixed;
+  top: 85%;
+  margin-left: 10px;
+float:right
+}
+/*.icon-bar a {
+  display: block;
+}*/
+
+#whatsapp{
+color: #2BC655 ;
+font-size: 100px;
+}
+
+
+#contacticon{
+	height: 110px;
+	width:  120px;
+}

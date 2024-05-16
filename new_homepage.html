@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home page</title>
+	<script src="https://kit.fontawesome.com/4aa2040201.js" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="nav1style.css">
+		  <style type="text/css">* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+     overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    background-color: #3498DB;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+        header{
+      background-color: #AED6F1 ;
+      height: 25px;
+
+    }
+       .icon-bar {
+  position: fixed;
+  top: 85%;
+  margin-left: 20px;
+float:right
+
+ }
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+ 
+
+  }
+
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    transition: 0.2s ease;
+    font-weight: bold;
+
+
+
+  }
+  nav .mainMenu li a:hover {
+    background: darkgray;
+
+  }
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  nav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-facebook:hover {
+    color: rgb(0, 110, 255);
+  }
+  .fa-twitter:hover {
+    color: rgb(86, 154, 243);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 0, 191);
+  }
+  
+  nav .logo {
+    margin: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  @media (max-width: 800px) {
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: gray;
+      transition: top 1s ease 0s;
+      display: none;
+    }
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav .openMenu {
+      display: block;
+    }
+    nav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+    #logo{
+          width: 163px;
+          margin-left: 40px;
+          padding-top: 2px;
+        }</style>
+</head>
+<body>
+  <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+        <nav>
+            <a href="new_homepage.html"><img id="logo"  src="pictures/Untitled Project (22).jpg"></a>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu" style="padding-top: 7px;">
+                <li><a href="new_homepage.html">Home</a></li>
+                <li><a href="umrah.html">Umrah</a></li>
+                <li><a href="internationaltours.html">International Tours</a></li>
+                <li><a href="pakistan_tours.html">Pakistan Tours</a></li>
+                <li><a href="new_gallery.html">Gallery</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="new_contact.html">Contact Us</a></li>
+                <li><a href="location.html">location</a></li>
+
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-gmail"></i>
+                </span>
+            </ul>
+        </nav>
+    <script >const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+const menu_items = document.querySelectorAll('nav .mainMenu li a');
+
+
+
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+// close menu when you click on a menu item 
+menu_items.forEach(item => {
+    item.addEventListener('click',function(){
+        close();
+    })
+})
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}</script>
+<!-- ....................Carousal........................... -->
+<div style="position: absolute; margin-top: 200px; color: black; background-color: white; margin-left: 30%; padding:10px 5px 10px 5px ;">
+  <h1>Find Your Special Tours Today</h1>
+  <h2 style="text-align:center">WITH<span style="color: #3498DB;">  PLEASANT TOURS</span> </h2>
+</div>
+</script>
+<img id="imgg" src="pictures/mainmainimg.jpg">
+
+<br><br>
+<center>
+<h4>GREAT PLACES TO VISIT</h4>
+<h2>Search <span  style="color: #3498DB;">and Enjoy!</span></h2>
+<center style="font-family: sans-serif;">Here at pleasanttours.pk we help tourists to find the best tour packages.<br>  plan your tour under the supervision of the  <br>professional consultants. </center>
+</center>
+<div class="icon-bar">
+  <a href="https://web.whatsapp.com/"><img src="pictures/app.png" style="height: 70px"> </a>
+</div>
+<br><br>
+<div style="background-color:#CAECEE ; height:470px; width: 97%; margin-left: 27px;">
+
+
+<center style="font-size: 50px; font-family: Ariel; align-content: center; color:#1C7B80 ;">International Tour Packages</center>
+	
+<div class="row justify-content-evenly " style="margin-left:15px;"  >
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-fifth" style="width: 18rem;border: white;"> 
+  <img id="package_main_img" src="pics/turkey1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Turkey Tour</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-fifth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+          <center style="font-size: 50px; font-family: Ariel; align-content: center;">Turkey Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pics/turkey1.jpg">
+          <img class="small-img" src="pics/turkey2.jpg">
+          <img class="small-img" src="pics/turkey3.jpg">
+          <br>
+          <img class="small-img" src="pics/turkey4.jpg">
+          <img class="small-img" src="pics/turkey5.jpg">
+          <img class="small-img" src="pics/turkey6.jpg">
+          </div>
+      <h6>
+Have you been thinking about travelling to Turkey from Pakistan but don’t know where to begin? If so, this comprehensive guide is meant just for you. There’s a reason why Turkey has always been one of the most popular tourist destinations in the world. Straddling Eastern Europe and Eastern Asia, this culturally-rich nation has seen numerous empires rise and fall. In fact, the history of this region can be traced back to the prehistoric era, some 5 million years ago. From the Hellenistic period to the modern-day Republic of Turkey, this region has been built and destroyed and then built again throughout centuries – the remnants of which can be seen across the country in the form of various landmarks.<br><br>
+Hagia Sophia and millennium-old ruins such as the monasteries in the Goreme Open Air Museum, Turkey also boasts a stunning landscape and the most incredible beaches. There is no shortage of reasons why you should include travelling to Turkey in your bucket list. However, if you are having a hard time figuring out how to apply for a visa or create an itinerary, here’s all that you need to know in order to plan a trip to Turkey from Pakistan.<br><br>
+
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Turkey Packages From Karachi</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Arrive in Istanbul</td>
+          <td>Day 1</td>
+          <td>Rs 38500</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Istanbul Old City Walking Tour </td>
+          <td>Day 2</td>
+          <td>Rs 55000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td>Flight to Cappadocia/ North Cappadocia Tour</td>
+          <td>Day 3</td>
+          <td>Rs 45000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Ephesus Tour / Flight to Istanbul  </td>
+          <td>3 Days/4 Nights</td>
+          <td>PRs 27964</td>
+        </tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ........second card........... -->
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-six" style="width: 18rem; margin-left: -35px; border: white;"> 
+  <img id="package_main_img" src="pictures/germany4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Germany Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-six" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+     <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+          <center style="font-size: 50px; font-family: Ariel; align-content: center;">Germany Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pictures/germany1.jpg">
+          <img class="small-img" src="pictures/germany2.jpg">
+          <img class="small-img" src="pictures/germany3.jpg">
+          <br>
+          <img class="small-img" src="pictures/germany4.jpg" style="width: 400px; height: 230px;">
+          <img class="small-img" src="pictures/germany5.jpg">
+          <img class="small-img" src="pictures/germany6.jpg">
+          </div>
+      <h6>Germany is a country with a landscape of rivers, forests, mountain ranges and North Sea beaches. It has over 2 millennia of history. Berlin is its capital and is a home to art and nightlife scenes. Munich one of its cities is known for its Oktoberfest and beer halls. Explore the highlights of Germany at Berlin and Munich with our customized packages and make your holiday a memorable one.<br><br>
+
+As the world leader in travel experiences since 1947, we connect you to the real Germany in a way like no other. It might be famed for its hurried Autobahn, but Germany is not a country we rush through. Covered in woodlands, forests, quaint villages and emerging cities, Trafalgar will show you that this destination is more than the sum of Berlin and Bavarian beer. Here, you will admire a castle that inspired the story of Cinderella and soak up the enormity of the country’s turbulent past. On a day in Dresden you will appreciate German resilience over the intricacies of Baroque architecture, whilst an encounter with the capital will dish up a banquet of museums and progressive cultural.<br><br> With a hunger for sausages and traditional clothes of dirndl or lederhosen packed in your bag, a trip to Germany will leave you with memories to cherish for years to come. Travel with us and unlock the infinite possibilities thanks to our exclusive Trafalgar Highlights.</h6>
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th>Germany Packages</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Lunch in a Medieval Castle High Above the Rhine River Valley</td>
+          <td>-</td>
+          <td>Rs 3850</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Rhine Valley Cruise</td>
+          <td>1 Day</td>
+          <td>Rs 55080</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Journey By High-Speed Train to Berlin</td>
+          <td>2 Days/4 Nights</td>
+          <td>Rs 45000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ..........third card............... -->
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-seven" style="width: 18rem;margin-left: -35px; border: white;"> 
+  <img id="package_main_img" src="pics/switzerland1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Switzerland Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-seven" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+          <center style="font-size: 50px; font-family: Ariel; align-content: center;">Switzerland Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pics/switzerland1.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/switzerland2.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/switzerland3.jpg" style="width: 370px; height: 287px;">
+          <br>
+          <img class="small-img" src="pics/switzerland4.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/switzerland5.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/switzerland6.jpg" style="width: 370px; height: 287px;">
+          </div>
+      <h6>Ascend to one of Europe’s highest peaks on a full-day trip to the magnificent mountain region of Jungfrau from Zurich. With a knowledgeable guide, travel by luxury coach through the scenic splendor of the Bernese Oberland region to the charming village of Grindelwald. Board the gondola Eiger Express of the newly opened V-Cableway and ascend the UNESCO World Heritage-listed Jungfraujoch mountain pass. Absorb sweeping vistas of a sprawling Alpine wonderland from the vertiginous vantage point of the Sphinx Observatory.<br><br> Explore the enchanting depths of an Ice Palace and capture fabulous photographs of the breath-taking landscape during your tour.<br><br>
+
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Switzerland Tour Package</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Jewels of the Alps</td>
+          <td>02 Days / 1 Night</td>
+          <td>Rs 10000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Hotel Swiss</td>
+          <td>03 Nights</td>
+          <td>Rs 39000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Grindelwald First - Top of Adventure</td>
+          <td>01 Day</td>
+          <td>Rs 16500</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Pilatus - The Golden Round Trip</td>
+          <td>01 Day / 1 Night</td>
+          <td>Rs 30000</td>
+        </tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ..............fourth card............... -->
+  <div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-eight" style="width: 18rem;margin-left: -35px; border: white;"> 
+  <img id="package_main_img"src="pictures/maldives1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Maldives Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-eight" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+          <center style="font-size: 50px; font-family: Ariel; align-content: center;">Maldives Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pictures/maldives1.jpg">
+          <img class="small-img" src="pictures/maldives2.jpg">
+          <img class="small-img" src="pictures/maldives3.jpg">
+          <br>
+          <img class="small-img" src="pictures/maldives4.jpg">
+          <img class="small-img" src="pictures/maldives5.jpg">
+          <img class="small-img" src="pictures/maldives6.jpg">
+          </div>
+      <h6>Explore the beautiful Maldives islands on this full day snorkeling tour. Relax under a sun umbrella on a sandbank by a blue lagoon. Dive into the water and discover the tropical underwater world as you snorkel around the reef. Look out for sea turtles, reef sharks and rays that inhabit the islands. Discover local island life and stop for lunch at the island of Huraa.<br><br>
+
+Take a break from your sun lounger and enjoy some outdoor activities in the Maldives. Be amazed by the underwater life on a guided snorkeling tour, visit a picturesque sand bank in the middle of the ocean, paddle a kayak in the crystal clear waters, spot dolphins on a cruise, and more. This tour is ideal for families and those who want to see and do a lot in a day.
+</h6>
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Maldives Packages </th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Gulhi Island Full-Day Tour from Maafushi</td>
+          <td>5 Days/4 Nights</td>
+          <td>Rs 155000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Snorkeling in Maldives half day trip</td>
+          <td>1 Days</td>
+          <td>Rs 16000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Adaaran club Rannalhi resort day trip</td>
+          <td>3 Days/4 Nights</td>
+          <td>Rs 99600</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Water Sports Combo - Jet Ski, Kayak & Tube ride</td>
+          <td>1 hour 25 minutes (approx.)</td>
+          <td>Rs 11000</td>
+        </tr>
+       </table>
+
+      </div>
+   <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- ...main div end.... -->
+<a href="internationaltours.html"><button>view more</button></a>
+
+</div>
+
+<br>
+
+<div style="background-color:#CAECEE ; height:430px; width: 97%; margin-left: 27px;">
+
+<center style="font-size: 50px; font-family: Ariel; align-content: center; color:#1C7B80 ;">Pakistan Tour Packages</center>
+
+
+
+<div class="row justify-content-evenly" style="margin-left: 15px;">
+
+	
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-first" style="width: 18rem;border: white;"> 
+  <img id="package_main_img" src="pictures/Kalam-Tour-Pacakges-2020.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Swat Kalam Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-first" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+     <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<!-- ................................................... -->
+      <div class="modal-body">
+               <center style="font-size: 50px; font-family: Ariel; align-content: center;">Swat Kalam Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pics/swat1.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/swat2.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/swat3.jpg" style="width: 370px; height: 287px;">
+          <br>
+          <img class="small-img" src="pics/swat4.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/swat5.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pics/swat6.jpg" style="width: 370px; height: 287px;">
+          </div>
+      <h6>Swat Valley is a beautiful mountainous region located in the northwest of Pakistan, known for its stunning natural scenery and rich cultural heritage. Being a tour operators we offer package tours to Swat Valley. These packages usually include transportation, accommodation, meals, and guided tours of the valley’s main attractions. Some popular activities in Swat Valley include trekking, hiking, and visiting historical sites such as the ruins of the ancient city of Udegram and the 2,000-year-old Buddhist stupas of Jahanabad. Swat tour packages also include visits to the valley’s many waterfalls and lakes, such as the Malam Jabba ski resort, and Kalam Valley. It is also possible to find package that includes adventure sports such as white water rafting, paragliding and rock climbing.<br><br>
+
+Swat Valley, Kalam, and Malam Jabba tour packages to explore sightseeing like Swat Motorway, red blood oranges, and peach orchards. Offering sightseeing to Swat River at Fiza Ghat, White Palace Marghzaar at Saidu Sharif, and the adventure activities destination Malam Jabba with Skiing, Zipline, Chairlift. Water streams are the main attraction in Bahrain Valley and night food street is an extra excursion to enjoy.  On the way to Kalam Valley, you will find Snow Glaciers, blue water streams, and cable cars for crossing rivers, on reaching Kalam you will find very pleasant weather and hotels constructed along the river. In Kalam Bazaar, bypass road offers a good landscape of the valley and on 10 minutes drive, you can visit Ushu Forest Kalam. The three mainly visited destinations in Kalam valley are Mahudand Lake and Blue Waters.</h6>
+       <table>
+       	<tr>
+       		<td></td>
+       		<td></td>
+       		<td></td>       	
+       	</tr>
+       	<tr>
+       		<th >Swat Packages From Karachi</th>
+       		<th>Day/Night</th>
+       		<th>Price</th>
+       	</tr>
+       	<tr>
+       		<td></td>
+       		<td></td>
+       		<td></td>       	
+       	</tr>
+       	<tr>
+       		<td >7 Days Winter Group Tour</td>
+       		<td>7 Days/6 Nights</td>
+       		<td>Rs 35000/person</td>
+       	</tr>
+       	<tr>
+       		<td></td>
+       		<td></td>
+       		<td></td>       	
+       	</tr>
+       	<tr>
+       		<td >3 Days Swat</td>
+       		<td>3 Days/2 Nights</td>
+       		<td>Rs 23000/person</td>
+       	</tr>
+       	<tr>
+       		<td></td>
+       		<td></td>
+       		<td></td>       	
+       	</tr>
+       	<tr>
+       		<td > 5 Days Swat</td>
+       		<td>5 Days/4 Nights</td>
+       		<td>Rs 80000/Couple</td>
+       	</tr>
+       	<tr>
+       		<td></td>
+       		<td></td>
+       		<td></td>       	
+       	</tr>
+       	<tr>
+       		<td >5 Days Swat Shorgan Tour</td>
+       		<td>6 Days/5 Nights</td>
+       		<td>Rs 95000/couple</td>
+       	</tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ........second card........... -->
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-second" style="width: 18rem; margin-left: -35px; border: white;"> 
+  <img id="package_main_img" src="pictures/Kumrat-Valley-Tour-Packages-2020.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Kumrat Valley Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-second" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+     <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+        <center style="font-size: 50px; font-family: Ariel; align-content: center;">Kumrat Valley   Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pictures/kumrat1.jfif" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/kumrat2.jfif" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/kumrat3.jfif" style="width: 370px; height: 287px;">
+          <br>
+          <img class="small-img" src="pictures/kumrat4.jfif" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/kumrat5.jfif" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/kumrat6.jfif" style="width: 370px; height: 287px;">
+          </div>
+      <h6>Kumrat Valley has situated almost two-hours away from the town of ‘Thal.’ A thousand tourists visit this Valley every summer from Pakistan’s different regions for its cold weather and greenery. Snow mountains and green pastures cover the Valley.<br><br>
+
+River ‘Panjkora,’ forests, and foggy mounds are the region’s attractions and habitats for several faunas and flora varieties. Another feature of this Valley is its heightened Deodar trees situated on the ground level near the Panjkora river. This article has all the information about the valley, including Kumrat Valley Hotels.</h6>
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Kumrat Valley Packages From Karachi</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Kumrat Valley</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 40500</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Kumrat Valley – Road trip from Karachi</td>
+          <td>9 Days/8 Nights</td>
+          <td>Rs 85000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Kumrat Valley Group Tour</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 35000/person</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Kumrat Valley – (Value added Holiday) From Karachi</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 110,000/ couple</td>
+        </tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ..........third card............... -->
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-third" style="width: 18rem;margin-left: -35px; border: white;"> 
+  <img id="package_main_img" src="pictures/Gilgit-Hunza-Tour-Packages-2020.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Hunza Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-third" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->
+      <div class="modal-body">
+         <center style="font-size: 50px; font-family: Ariel; align-content: center;">Gilgit Hunza Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pictures/hunza1.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/hunza2.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/hunza3.jpg" style="width: 370px; height: 287px;">
+          <br>
+          <img class="small-img" src="pictures/hunza4.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/hunza5.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/hunza6.jpg" style="width: 370px; height: 287px;">
+          </div>
+      <h6>Hunza tour packages – Navigate through a wide range of Hunza holiday packages with exciting offers at Pakistan Travel Guide. Book customized Hunza vacation packages with discounts on early bookings.<br><br>
+
+2023 arrived and the expectations of every tourist to explore new destinations and planning of tours. So what Pakistan Travel Guide bought for you in 2023? We have changed the itineraries of Hunza tour packages 2023 and added some more destinations with every month’s planned tour from Multan, Lahore, and Islamabad. Keeping Covid-19 in mind we are maintaining a list of SOP for travel to Gilgit Hunza in 2023 with strict procedural implementations.<br><br>
+
+Get Holiday customized Hunza tour packages for sightseeing at cheap prices only on PakistanTravelGuide. Here, you will find various Hunza travel packages at a reasonable price for couples, honeymooners, corporate travelers, and group travelers. We provide a wide variety of packages with inclusions of the list of tourist attractions like Altit Fort, Fort Baltit, Attabad Lake, etc for your convenience during the Hunza trip. We have different theme packages prepared for various travelers like Hunza Tour Packages for couples, Hunza Tour packages for families, etc</h6>
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Hunza Packages From Karachi</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Explore Hunza Valley – Flight Inclusive Deal From Karachi</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 38500</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Splendid Gilgit Hunza – Road trip from Karachi</td>
+          <td>9 Days/8 Nights</td>
+          <td>Rs 55000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Road Trip (customizable) From Islamabad</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 45000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Splendid Hunza Valley – (Value added Holiday) From Karachi</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 30000</td>
+        </tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ..............fourth card............... -->
+	<div class="card" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-fourth" style="width: 18rem;margin-left: -35px; border: white;"> 
+  <img id="package_main_img"src="pictures/Murree-tour-Packages-2020.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Murree Tour Packages</p>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal-fourth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <header>
+  <div id="icons" style="margin-right:30px;float: right; color: black;">
+<i class="fa-brands fa-facebook fa-lg"></i>
+<i class="fa-brands fa-twitter fa-lg"></i>
+<i class="fa-brands fa-square-instagram fa-lg" ></i>
+<i class="fa-solid fa-envelope fa-lg"></i></div>
+</header>
+
+<br>
+<!-- ................................................... -->>
+      <div class="modal-body">
+          <center style="font-size: 50px; font-family: Ariel; align-content: center;">Murree Tour Packages</center>
+<div id="mainpicturediv">
+          <img class="small-img" src="pictures/muree1.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/muree2.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/muree3.jpg" style="width: 370px; height: 287px;">
+          <br>
+          <img class="small-img" src="pictures/muree4.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/muree5.jpg" style="width: 370px; height: 287px;">
+          <img class="small-img" src="pictures/muree6.jpg" style="width: 370px; height: 287px;">
+          </div>
+      <h6>Being home to diverse cultures and tourist attractions, one of the best ways to visit Murree is by choosing Murree Tour Packages. The Murree tour packages by pakistantravelguide.pk will have a mixture of all that you need to enjoy here and save you from the hassles of looking for good hotels, bargaining with transport drivers, and other problems that could consume much time of your holiday. That is why you should check out the Murree Tour Packages so that your vacation in Murree is Ideal, enjoyable, and all that you wanted from your great retreat.<br><br>
+
+The Pleasant Tours offers Murree holiday packages that also give you the option to add or subtract destinations, talk to a Pakistan Travel Guide expert travel consultant and get all your questions solved at once. Depending on the number of days you dedicate to your vacations, we will make sure you get the best Murree experience you had thought ever. With complete information on your travel itinerary, day-wise schedules, details on current temperatures and more Pakistan Travel Guide not just gives you amazing vacation experiences but all that you need to know to make it the most memorable. With Pakistan Travel Guide, you will be taking back memories and experiences that you will look back, cherish, and feel good for the years to come.</h6>
+       <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <th >Murree Packages From Karachi</th>
+          <th>Day/Night</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Two Days at Thandiani</td>
+          <td>2 Days/1 Nights</td>
+          <td>Rs 40000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Muree Naghan Kaghan</td>
+          <td>7 Days/6 Nights</td>
+          <td>Rs 115000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td > Neelum Valley</td>
+          <td>6 Days/5 Nights</td>
+          <td>Rs 110000</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>         
+        </tr>
+        <tr>
+          <td >Muree Shorgan Tour</td>
+          <td>2 Days/3 Nights</td>
+          <td>Rs 5000/couple</td>
+        </tr>
+       </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<a href="pakistan_tours.html"><button>view more</button></a>
+</div>
+<br><br><br><br>
+<center>
+<h4 >YOUR KIND OF HOLIDAY</h4>
+<h2>Your world,<span  style="font-weight: bolder; color: #3498DB;"> your way</span></h2>
+<center style="font-family: sans-serif;"> Here you can find a variety of World tour packages to make your 2023 journey<br> awesome and memorable</center>
+
+<br><hr><br>
+<br><br><br>
+ <div class="wrapper">
+    <div class="container">
+     <i class="fa-solid fa-users"></i>
+      <span class="num" data-val="1240">000</span>
+      <span class="text">Over Tourists</span>
+    </div>
+    <div class="container">
+      <i class="fa-solid fa-earth-americas"></i>
+      <span class="num" data-val="298">000</span>
+      <span class="text">Organized Tours So Far</span>
+    </div>
+    <div class="container">
+     <i class="fa-solid fa-plane"></i>
+      <span class="num" data-val="35">00</span>
+      <span class="text">More Then Countries</span>
+    </div>
+  </div>
+  <br>
+  <script type="text/javascript">
+    let valueDisplays = document.querySelectorAll(".num");
+let interval =  1000;
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+     
+    let duration = Math.floor(interval / endValue);
+     let counter = setInterval(function  ( ) {
+     
+        startValue +=1;
+           
+        if (endValue== 0) {
+            startValue -= 1;
+        }
+        valueDisplay.textContent=startValue;
+        if (startValue== endValue) {
+            clearInterval(counter);
+        }
+
+
+     },duration);
+}) ;
+  </script>
+<br><br>
+<br><br>
+<div id="reviewpics">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="pictures/reviewcarousal1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="pictures/reviewcarousal2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="pictures/reviewcarousal3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="review">
+  <center  style="font-weight: bolder; color: #3498DB; font-size: 28px;"  >TOUR REVIEWS <hr style="width:90%;"></center>
+  <img src="pictures/review1.jpg" id="review-img">
+  <br>
+  <h5 style="margin-right: 390px;">Sofia Baker</h5>
+<div style="margin-right: 390px; color: orange;">
+  <span  class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+</div>
+  <p style="text-align:left; font-family:sans-serif; margin-left: 10px;">
+The sightseeing and activities were better than we even thought! I still can’t believe we did so much in such a short time, but we did not feel stressed. We really loved the tour and would do it all over again in a minute! Thanks.<hr style="width:90%;">
+
+</p>
+
+ <img src="pictures/review2.jpeg" id="review-img">
+  <br>
+  <h5 style="margin-right: 390px;">jhon Robert</h5>
+<div style="margin-right: 390px; color: orange; ">
+  <span  class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span>
+</div>
+  <p style="text-align:left; font-family:sans-serif; padding-left:10px;">
+I had a wonderful time during the trip. The guide was informative, friendly and attentive to our entire group! I definitely plan to be a returning customer and recommend this to my friends and family!
+</p>
+</div>
+<div style="margin-top: 700px;">
+  <h2>Book Your<span  style="font-weight: bolder; color: #3498DB;"> Tours </span>Today</h2>
+<h6>Here at pleasantTours.pk we help tourists to find the best tour packages. Here you can find the potential tour packages in Pakistan as well as the world tour packages. You can find already planned tours. However, you can also arrange the tour packages according to your availability. For all other consultancy contact us today and plan your tour under the supervision of the professional consultants.</h6>
+</div>
+
+<footer style="background-color:#3498DB; height: 240px; margin-top: 5%;">
+<p style="font-size: 25px; text-align: center; padding-top:40px; color:white;">87/1 Block 5A, North Nazimabad , Near Dilpasand, Pakistan Karachi </p>
+<div id="icons" >
+<a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-2xl" style="color: white; "></i></a>
+<a href="https://www.twitter.com/"><i class="fa-brands fa-twitter fa-2xl" style="color: white;"></i></a>
+<a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-2xl" style="color: white;"></i></a>
+<a href="https://www.gmail.com/"><i class="fa-regular fa-envelope fa-2xl" style="color: white;"></i></a>
+</div>
+<br>
+<div >
+<p style="text-align: center; font-size:16px; padding-left: 100px; padding-right: 100px; color: white;">Copyright © 2022 Trips.pk. All rights reserved.<br>
+Disclaimer: PleasantTours.pk is Paksitan’s largest travel platform which helps travelers connect with tour operators and travel agents. Different services/products listed on this website are directly offered/sold by the respective agent.</p>
+
+</footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</html>
